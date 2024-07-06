@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Smart Reply</title>
+    <script src="popup.js"></script>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #000;
+        margin: 0;
+        padding: 0;
+        color: #fff;
+      }
+      .container {
+        width: 400px;
+        margin: 20px;
+        background-color: #333;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+      h1 {
+        font-size: 24px;
+        color: #fff;
+        text-align: center;
+      }
+      .input {
+        width: 100%;
+      }
+      span {
+        font-size: 16px;
+        color: #fff;
+        margin-bottom: 8px;
+      }
+      label {
+        font-size: 16px;
+        color: #fff;
+        margin-bottom: 8px;
+        display: block;
+      }
+      select,
+      textarea,
+      input[type="text"] {
+        width: 100%; /* Adjust width calculation */
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #777;
+        border-radius: 4px;
+        font-size: 16px;
+        background-color: #444;
+        color: #fff;
+        box-sizing: border-box; /* Include padding and border in the element's width */
+      }
+      button {
+        padding: 12px 20px;
+        background-color: #0073b1;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        font-size: 16px;
+        cursor: pointer;
+        margin-top: 20px;
+      }
+      button:hover {
+        background-color: #005d8e;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Smart Reply</h1>
+      <div class="input">
+        <label for="tone">Select a tone:</label>
+        <select id="tone">
+          <option value="Informative">Informative</option>
+          <option value="Friendly">Friendly</option>
+          <option value="Professional">Professional</option>
+          <option value="Supportive">Supportive</option>
+          <option value="Casual">Casual</option>
+          <option value="Enthusiastic">Enthusiastic</option>
+          <option value="Neutral">Neutral</option>
+          <option value="Motivational">Motivational</option>
+        </select>
+      </div>
+      <div class="input">
+        <label for="comment">How you want your reply:</label>
+        <textarea id="comment" rows="4">
+You are an assistant trained to generate responses that are not only professional and friendly but also engaging and enthusiastic, mimicking a high-quality human interaction on social media. Make sure the reponses are not too long and most cases two liner.
+</textarea
+        >
+      </div>
+      <div class="input">
+        <label for="name">Your Open AI Key:</label>
+        <input type="text" id="key" placeholder="Patse here your Open AI Key" />
+      </div>
+      <div class="input">
+        <label for="switch">Toggle Switch:</label>
+        <input type="checkbox" id="hashtags" />
+        <span>Add Hashtags</span>
+      </div>
+      <div class="input">
+        <label for="switch">Toggle Switch:</label>
+        <input type="checkbox" id="emojis" />
+        <span>Add Emojis</span>
+      </div>
+      <div class="input">
+        <label for="switch">Toggle Switch:</label>
+        <input type="checkbox" id="switch" />
+        <span>Generate Text on Comment box Click</span>
+      </div>
+
+      <button id="save">Save</button>
+    </div>
+  </body>
+</html>

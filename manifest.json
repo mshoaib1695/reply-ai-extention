@@ -1,0 +1,45 @@
+{
+    "manifest_version": 3,
+    "name": "Smart Reply",
+    "version": "1.0",
+    "description": "Smart Reply for linkedin",
+    "permissions": [
+      "activeTab",
+      "storage"
+    ],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "action": {
+      "default_popup": "popup.html",
+      "default_icon": {
+        "16": "icon.png",
+        "48": "icon.png",
+        "128": "icon.png"
+      }
+    },
+    "icons": {
+      "16": "icon.png",
+      "48": "icon.png",
+      "128": "icon.png"
+    },
+    "content_scripts": [
+      {
+        "matches": ["*://www.linkedin.com/*"],
+        "js": ["content.js"]
+      },
+      {
+        "matches": ["*://twitter.com/*"],
+        "js": ["contentTwitter.js"]
+      }
+    ],
+    "web_accessible_resources": [
+      {
+        "resources": [
+          "icon.png"
+        ],
+        "matches": ["<all_urls>"]
+      }
+    ]
+  }
+  
